@@ -43,7 +43,7 @@
 </style>
 <script>
     (async function init() {
-        const response = await fetch('http://65.1.86.145:3000/get-profile');
+        const response = await fetch('http://3.95.152.135:3000/get-profile');
         console.log("response", response);
         const user = await response.json();
         console.log(JSON.stringify(user));
@@ -66,7 +66,7 @@
             interests: document.getElementById('input-interests').value
         };
         
-        const response = await fetch('http://localhost:3000/update-profile', {
+        const response = await fetch('http://3.95.152.135:3000/update-profile', {
             method: "POST",
             headers: {
               'Accept': 'application/json',
@@ -100,9 +100,9 @@
     <div class='container' id='container'>
         <h1>User profile</h1>
         <img src='profile-picture' alt="user-profile">
-        <span>Name: </span><h3 id='name'>Anna Smith</h3>
+        <span>Name: </span><h3 id='name'>Srinivas Saini</h3>
         <hr />
-        <span>Email: </span><h3 id='email'>anna.smith@example.com</h3>
+        <span>Email: </span><h3 id='email'>saini@example.com</h3>
         <hr />
         <span>Interests: </span><h3 id='interests'>coding</h3>
         <hr />
