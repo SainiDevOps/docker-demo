@@ -1,4 +1,4 @@
-FROM node:13-alpine
+FROM node:20-alpine
 
 ENV MONGO_DB_USERNAME=admin \
     MONGO_DB_PWD=password
@@ -12,6 +12,7 @@ WORKDIR /home/app
 
 # will execute npm install in /home/app because of WORKDIR
 RUN npm install
+RUN npm install express
 
 # no need for /home/app/server.js because of WORKDIR
 CMD ["node", "server.js"]
